@@ -20,7 +20,7 @@
       "category": "Wellbore",
       "severity": "warning",
       "resourceUuid": "wellboreUuid",
-      "message": "TVD unit for wellbore ${wellboreName}(${wellboreUuid}) is not meters, unit is ${mdUnit}",
+      "message": "TVD unit for wellbore ${wellboreName}(${wellboreUuid}) is not meters, unit is ${tvdUnit}",
       "shortDescription": "TVD unit for wellbore ${wellboreName} is not in meters"
     },
     "DEPTH_REF_NOT_METERS": {
@@ -135,16 +135,16 @@
       "message": "${diameter} shoe at ${depthTopMd} has no height",
       "shortDescription": "${diameter} shoe at ${depthTopMd} has no height"
     },
-    "SHOE_BOTTOM_ABOVE_TOP": {
-      "code": "SHOE_BOTTOM_ABOVE_TOP",
+    "SHOE_BOTTOM_ABOVE_TOP_CASING": {
+      "code": "SHOE_BOTTOM_ABOVE_TOP_CASING",
       "category": "Casing",
       "severity": "warning",
       "resourceUuid": "wellboreUuid",
       "message": "${shoe.diameter} shoe bottom at ${shoe.bottom} is above top of ${diameter} casing at ${top}",
       "shortDescription": "${shoe.diameter} shoe bottom at ${shoe.bottom} is above top of ${diameter} casing at ${top}"
     },
-    "SHOE_TOP_BELOW_BOTTOM": {
-      "code": "SHOE_TOP_BELOW_BOTTOM",
+    "SHOE_TOP_BELOW_BOTTOM_CASING": {
+      "code": "SHOE_TOP_BELOW_BOTTOM_CASING",
       "category": "Casing",
       "severity": "warning",
       "resourceUuid": "wellboreUuid",
