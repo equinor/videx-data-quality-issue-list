@@ -1,5 +1,3 @@
-import DataQualityIssues from '../../../../dataqualityissuelist.json';
-
 /**
  * 
  * @param {*} issue - issue object without injected attributes
@@ -24,8 +22,4 @@ export function transformIssue(issue, options = {}) {
     resourceUuid,
     shortDescription,
   };
-}
-
-export function getDataQualityIssueList() {
-  return DataQualityIssues;
 }
