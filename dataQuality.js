@@ -230,3 +230,38 @@ export const UNABLE_TO_MATCH_TOP_OR_BASE = (uuid, current) => ({
   message: `Unable to match ${current.name} pick with top or base surface, pick is ignored`,
   shortDescription: `Unable to match ${current.name} pick with top or base surface`,
 });
+
+/**
+ *
+ * @param {*} uuid
+ * @param {*} pickIdentifier
+ * @param {*} mdMsl pick entry or exit md msl
+ * @param {*} calculatedTvd calculated entry or exit tvd
+ * @param {*} tvdMslOrg source entry or exit tvd
+ * @param {*} tvdDifference difference between calculated and source
+ * @returns
+ */
+export const CALCULATED_TVD_NOT_MATCHING_SOURCE = (uuid, pickIdentifier, mdMsl, calculatedTvd, tvdMslOrg, tvdDifference) => ({
+  code: 'CALCULATED_TVD_NOT_MATCHING_SOURCE',
+  category: 'Logs',
+  severity: 'warning',
+  resourceUuid: uuid,
+  message: `Calculated pick TVD for ${pickIdentifier} at ${mdMsl}m MD MSL does not match TVD from source (calculated ${calculatedTvd}m TVD MSL, source ${tvdMslOrg}m TVD MSL, a ${tvdDifference}m difference)`,
+  shortDescription: `Calculated pick TVD for ${pickIdentifier} at ${mdMsl}m MD MSL does not match TVD from source `,
+});
+
+export const MIN_VALUE_NEGATIVE = (wellboreUuid, key, min) => ({
+  code: 'MIN_VALUE_NEGATIVE',
+  category: 'Production',
+  severity: 'warning',
+  resourceUuid: wellboreUuid,
+  message: `Potential data error, minimum value for ${key} is negative(${min})`,
+  shortDescription: `Potential data error, minimum value for ${key} is negative(${min})`,
+});
+
+export const CALCULATED_TRAJECTORY_DIFFERENT_FROM_DRILLED = (uuid, totalDepthDrillerMd, length) => ({
+  category: 'Wellbore',
+  severity: 'warning',
+  resourceUuid: uuid,
+  message: `Calculated wellbore trajectory length ${totalDepthDrillerMd}m MD RKB differ from total depth driller ${length}m MD RKB`,
+});
