@@ -238,4 +238,5 @@ export const CALCULATED_TRAJECTORY_DIFFERENT_FROM_DRILLED = (uuid, totalDepthDri
   severity: 'warning',
   resourceUuid: uuid,
   message: `Calculated wellbore trajectory length ${totalDepthDrillerMd}m MD RKB differ from total depth driller ${length}m MD RKB`,
+  shortDescription: 'Calculated wellbore trajectory length differ from drilled',
 });
