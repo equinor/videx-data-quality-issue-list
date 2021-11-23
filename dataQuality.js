@@ -1,6 +1,6 @@
 export const HEADER_NOT_FOUND = (wellboreUuid, wellboreName) => ({
   code: HEADER_NOT_FOUND,
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
   message: `Header not found for wellbore ${wellboreName}(${wellboreUuid}), MD and TVD is not converted to MSL`,
@@ -9,7 +9,7 @@ export const HEADER_NOT_FOUND = (wellboreUuid, wellboreName) => ({
 
 export const MD_NOT_METERS = (wellboreUuid, wellboreName, mdUnit) => ({
   code: 'MD_NOT_METERS',
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
   message: `MD unit for wellbore ${wellboreName}(${wellboreUuid}) is not meters, unit is ${mdUnit}`,
@@ -18,7 +18,7 @@ export const MD_NOT_METERS = (wellboreUuid, wellboreName, mdUnit) => ({
 
 export const TVD_NOT_METERS = (wellboreUuid, wellboreName, tvdUnit) => ({
   code: 'TVD_NOT_METERS',
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
   message: `TVD unit for wellbore ${wellboreName}(${wellboreUuid}) is not meters, unit is ${tvdUnit}`,
@@ -27,7 +27,7 @@ export const TVD_NOT_METERS = (wellboreUuid, wellboreName, tvdUnit) => ({
 
 export const DEPTH_REF_NOT_METERS = (wellboreUuid, wellboreName, mdUnit) => ({
   code: 'DEPTH_REF_NOT_METERS',
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
   message: `Depth reference elevation unit for wellbore ${wellboreName}(${wellboreUuid}) is not meters, unit is ${mdUnit}`,
@@ -36,7 +36,7 @@ export const DEPTH_REF_NOT_METERS = (wellboreUuid, wellboreName, mdUnit) => ({
 
 export const DEPTH_REF_MD_UNIT_MISMATCH = (wellboreUuid, wellboreName, depthReferenceElevationUnit, mdUnit) => ({
   code: 'DEPTH_REF_MD_UNIT_MISMATCH',
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
   message: `Depth reference elevation unit ${depthReferenceElevationUnit} does not match MD unit ${mdUnit} for wellbore ${wellboreName}(${wellboreUuid})`,
@@ -45,7 +45,7 @@ export const DEPTH_REF_MD_UNIT_MISMATCH = (wellboreUuid, wellboreName, depthRefe
 
 export const DEPTH_REF_TVD_UNIT_MISMATCH = (wellboreUuid, wellboreName, depthReferenceElevationUnit, tvdUnit) => ({
   code: 'DEPTH_REF_TVD_UNIT_MISMATCH',
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
   message: `Depth reference elevation unit ${depthReferenceElevationUnit} does not match TVD unit ${tvdUnit} for wellbore ${wellboreName}(${wellboreUuid})`,
@@ -54,7 +54,7 @@ export const DEPTH_REF_TVD_UNIT_MISMATCH = (wellboreUuid, wellboreName, depthRef
 
 export const PICK_MD_NOT_METERS = (wellboreUuid, uuid, uniqueWellboreIdentifier, pickIdentifier, mdUnit) => ({
   code: 'PICK_MD_NOT_METERS',
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: uuid,
   message: `Picks: MD unit for pick ${pickIdentifier} on wellbore ${uniqueWellboreIdentifier}(${wellboreUuid}) is ${mdUnit}`,
@@ -63,7 +63,7 @@ export const PICK_MD_NOT_METERS = (wellboreUuid, uuid, uniqueWellboreIdentifier,
 
 export const PICK_DEPTH_REF_NOT_METERS = (wellboreUuid, uuid, uniqueWellboreIdentifier, pickIdentifier, depthReferenceElevationUnit) => ({
   code: 'DEPTH_REF_NOT_METERS',
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: uuid,
   message: `Picks: Depth reference elevation unit for pick ${pickIdentifier} on wellbore ${uniqueWellboreIdentifier}(${wellboreUuid}) is ${depthReferenceElevationUnit}`,
@@ -72,7 +72,7 @@ export const PICK_DEPTH_REF_NOT_METERS = (wellboreUuid, uuid, uniqueWellboreIden
 
 export const PICK_DEPTH_REF_MD_MISMATCH = (uuid, p) => ({
   code: 'PICK_DEPTH_REF_MD_MISMATCH',
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: uuid,
   message: `Picks: Depth reference elevation unit ${p.depthReferenceElevationUnit} does not match md unit ${p.mdUnit} for pick ${p.pickIdentifier} on wellbore ${p.uniqueWellboreIdentifier}(${p.wellboreUuid})`,
@@ -81,7 +81,7 @@ export const PICK_DEPTH_REF_MD_MISMATCH = (uuid, p) => ({
 
 export const PICK_NO_DEPTH_REF = (wellboreUuid, uuid, uniqueWellboreIdentifier, pickIdentifier, source) => ({
   code: 'PICK_NO_DEPTH_REF',
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: uuid,
   message: `Picks: No depth reference elevation for pick ${pickIdentifier} on wellbore ${uniqueWellboreIdentifier}(${wellboreUuid}) source: ${source}`,
@@ -90,7 +90,7 @@ export const PICK_NO_DEPTH_REF = (wellboreUuid, uuid, uniqueWellboreIdentifier, 
 
 export const INVALID_COORDINATE_VALUES = (wellboreUuid, uniqueWellboreIdentifier) => ({
   code: 'INVALID_COORDINATE_VALUES',
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
   message: `Invalid values in survey samples easting/northing for ${uniqueWellboreIdentifier}(${wellboreUuid})`,
@@ -126,7 +126,7 @@ export const QTZT_NOT_AVAILABLE = (wellboreIdentifier) => ({
 
 export const NO_POSLOG = (wellboreUuid) => ({
   code: 'NO_POSLOG',
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
   message: `No position log found for ${wellboreUuid}, a vertical wellbore using information from wellbore header is provided.`,
@@ -234,7 +234,7 @@ export const MIN_VALUE_NEGATIVE = (wellboreUuid, key, min) => ({
 });
 
 export const CALCULATED_TRAJECTORY_DIFFERENT_FROM_DRILLED = (uuid, totalDepthDrillerMd, length) => ({
-  category: 'Wellbore',
+  category: 'Other wellbores',
   severity: 'warning',
   resourceUuid: uuid,
   message: `Calculated wellbore trajectory length ${totalDepthDrillerMd}m MD RKB differ from total depth driller ${length}m MD RKB`,
