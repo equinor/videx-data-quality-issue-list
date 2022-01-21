@@ -240,3 +240,11 @@ export const CALCULATED_TRAJECTORY_DIFFERENT_FROM_DRILLED = (uuid, totalDepthDri
   message: `Calculated wellbore trajectory length ${totalDepthDrillerMd}m MD RKB differ from total depth driller ${length}m MD RKB`,
   shortDescription: 'Calculated wellbore trajectory length differ from drilled',
 });
+
+export const MULTIPLE_SURFACES_WITH_SAME_NAME = (surfaceName) => ({
+  category: 'Surfaces',
+  severity: 'warning',
+  resourceUuid: null,
+  message: `There are more than one surface named ${surfaceName}, this may affect display of formations in the intersection`,
+  shortDescription: 'Multiple surfaces with same name',
+});
