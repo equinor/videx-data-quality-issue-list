@@ -248,3 +248,24 @@ export const MULTIPLE_SURFACES_WITH_SAME_NAME = (surfaceName) => ({
   message: `There are more than one surface named ${surfaceName}, this may affect display of formations in the intersection`,
   shortDescription: 'Multiple surfaces with same name',
 });
+export const TRAJECTORY_PATH = (uniqueWellboreIdentifier) => ({
+  category: 'Operational wellbores',
+  severity: 'warning',
+  resourceUuid: uniqueWellboreIdentifier,
+  message: `Missing trajectory path in ${uniqueWellboreIdentifier}`,
+  shortDescription: `${uniqueWellboreIdentifier} is currently missing trajectory path`,
+});
+export const TRAJECTORY_NORTHING = (uniqueWellboreIdentifier) => ({
+  category: 'Operational wellbores',
+  severity: 'warning',
+  resourceUuid: uniqueWellboreIdentifier,
+  message: `Missing northing values in ${uniqueWellboreIdentifier}`,
+  shortDescription: `${uniqueWellboreIdentifier} is currently missing northing values`,
+});
+export const TRAJECTORY_EASTING = (uniqueWellboreIdentifier) => ({
+  category: 'Operational wellbores',
+  severity: 'warning',
+  resourceUuid: uniqueWellboreIdentifier,
+  message: `Missing easting values in ${uniqueWellboreIdentifier}`,
+  shortDescription: `${uniqueWellboreIdentifier} is currently missing easting values`,
+});
