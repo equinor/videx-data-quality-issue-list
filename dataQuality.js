@@ -246,5 +246,5 @@ export const MULTIPLE_SURFACES_WITH_SAME_NAME = (surfaceName) => ({
   severity: 'warning',
   resourceUuid: null,
   message: `There are more than one surface named ${surfaceName}, this may affect display of formations in the intersection`,
-  shortDescription: 'Multiple surfaces with same name',
+  shortDescription: `The name, ${surfaceName} is used for multiple surfaces`,
 });
