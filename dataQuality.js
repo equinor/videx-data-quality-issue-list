@@ -248,7 +248,7 @@ export const MULTIPLE_SURFACES_WITH_SAME_NAME = (surfaceName) => ({
   message: `There are more than one surface named ${surfaceName}, this may affect display of formations in the intersection`,
   shortDescription: `The name, ${surfaceName} is used for multiple surfaces`,
 });
-export const TRAJECTORY_PATH_ = (uniqueWellboreIdentifier) => ({
+export const TRAJECTORY_PATH = (uniqueWellboreIdentifier) => ({
   category: 'Operational wellbores',
   severity: 'warning',
   resourceUuid: uniqueWellboreIdentifier,
