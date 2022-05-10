@@ -255,11 +255,11 @@ export const TRAJECTORY_PATH = (uniqueWellboreIdentifier) => ({
   message: `Missing trajectory path in ${uniqueWellboreIdentifier}`,
   shortDescription: `${uniqueWellboreIdentifier} is currently missing trajectory path`,
 });
-export const TRAJECTORY_NORTHING_OR_EASTING = (uniqueWellboreIdentifier) => ({
+export const TRAJECTORY_NORTHING_OR_EASTING = (uniqueWellboreIdentifier, wellboreUuid) => ({
   category: 'Operational wellbores',
   severity: 'warning',
-  resourceUuid: uniqueWellboreIdentifier,
-  message: `Missing northing or easting in ${uniqueWellboreIdentifier}`,
+  resourceUuid: wellboreUuid,
+  message: `Wellbore ${uniqueWellboreIdentifier} is currently missing northing or easting values and will not be displayed in the map`,
   shortDescription: `${uniqueWellboreIdentifier} is currently missing northing or easting values`,
 });
 
