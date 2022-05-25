@@ -241,25 +241,26 @@ export const CALCULATED_TRAJECTORY_DIFFERENT_FROM_DRILLED = (uuid, totalDepthDri
   shortDescription: 'Calculated wellbore trajectory length differ from drilled',
 });
 
-export const MULTIPLE_SURFACES_WITH_SAME_NAME = (surfaceName) => ({
+export const MULTIPLE_SURFACES_WITH_SAME_NAME = surfaceName => ({
   category: 'Surfaces',
   severity: 'warning',
   resourceUuid: null,
   message: `There are more than one surface named ${surfaceName}, this may affect display of formations in the intersection`,
   shortDescription: `The name, ${surfaceName} is used for multiple surfaces`,
 });
-export const TRAJECTORY_PATH = (uniqueWellboreIdentifier) => ({
+
+export const TRAJECTORY_PATH = uniqueWellboreIdentifier => ({
   category: 'Operational wellbores',
   severity: 'warning',
   resourceUuid: uniqueWellboreIdentifier,
-  message: `Missing trajectory path in ${uniqueWellboreIdentifier}`,
-  shortDescription: `${uniqueWellboreIdentifier} is currently missing trajectory path`,
-});
-export const TRAJECTORY_NORTHING_OR_EASTING = (uniqueWellboreIdentifier) => ({
-  category: 'Operational wellbores',
-  severity: 'warning',
-  resourceUuid: uniqueWellboreIdentifier,
-  message: `Missing northing or easting in ${uniqueWellboreIdentifier}`,
-  shortDescription: `${uniqueWellboreIdentifier} is currently missing northing or easting values`,
+  message: `Trajectory for ${uniqueWellboreIdentifier} is not available from Sitecom`,
+  shortDescription: `${uniqueWellboreIdentifier} trajectory not available from Sitecom`,
 });
 
+export const TRAJECTORY_NORTHING_OR_EASTING = uniqueWellboreIdentifier => ({
+  category: 'Operational wellbores',
+  severity: 'warning',
+  resourceUuid: uniqueWellboreIdentifier,
+  message: `Northing and/or easting is not available from Sitecom for ${uniqueWellboreIdentifier}`,
+  shortDescription: `${uniqueWellboreIdentifier} is missing northing or easting in Sitecom`,
+});
