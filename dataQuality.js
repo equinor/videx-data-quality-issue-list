@@ -115,7 +115,7 @@ export const POSSIBLE_INVALID_VALUE = (wellboreUuid, name) => ({
   shortDescription: `Potential invalid values found in ${name}`,
 });
 
-export const QTZT_NOT_AVAILABLE = (wellboreIdentifier) => ({
+export const QTZT_NOT_AVAILABLE = wellboreIdentifier => ({
   code: 'QTZT_NOT_AVAILABLE',
   category: 'Logs',
   severity: 'warning',
@@ -124,7 +124,7 @@ export const QTZT_NOT_AVAILABLE = (wellboreIdentifier) => ({
   shortDescription: `QTZT is not available for wellbore ${wellboreIdentifier}, QT is calculated from QWZT, QOZT and QGZT.`,
 });
 
-export const NO_POSLOG = (wellboreUuid) => ({
+export const NO_POSLOG = wellboreUuid => ({
   code: 'NO_POSLOG',
   category: 'Other wellbores',
   severity: 'warning',
