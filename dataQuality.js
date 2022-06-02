@@ -264,3 +264,11 @@ export const TRAJECTORY_NORTHING_OR_EASTING = uniqueWellboreIdentifier => ({
   message: `Northing and/or easting is not available from Sitecom for ${uniqueWellboreIdentifier}`,
   shortDescription: `${uniqueWellboreIdentifier} is missing northing or easting in Sitecom`,
 });
+
+export const TRAJECTORY_SMDA = (uniqueWellboreIdentifier) => ({
+  category: 'Operational wellbores',
+  severity: 'warning',
+  resourceUuid: uniqueWellboreIdentifier,
+  message: `${uniqueWellboreIdentifier} is missing Sitecom trajectory path, and is therfore currently using a trajectory path provided by SMDA`,
+  shortDescription: `${uniqueWellboreIdentifier} is currently missing Sitecom trajectory path `,
+});
