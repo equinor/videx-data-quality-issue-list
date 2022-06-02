@@ -255,6 +255,7 @@ export const TRAJECTORY_PATH = (uniqueWellboreIdentifier) => ({
   message: `Missing trajectory path in ${uniqueWellboreIdentifier}`,
   shortDescription: `${uniqueWellboreIdentifier} is currently missing trajectory path`,
 });
+
 export const TRAJECTORY_NORTHING_OR_EASTING = (uniqueWellboreIdentifier, wellboreUuid) => ({
   category: 'Operational wellbores',
   severity: 'warning',
@@ -263,3 +264,10 @@ export const TRAJECTORY_NORTHING_OR_EASTING = (uniqueWellboreIdentifier, wellbor
   shortDescription: `${uniqueWellboreIdentifier} is currently missing northing or easting values`,
 });
 
+export const TRAJECTORY_SMDA = (uniqueWellboreIdentifier) => ({
+  category: 'Operational wellbores',
+  severity: 'warning',
+  resourceUuid: uniqueWellboreIdentifier,
+  message: `${uniqueWellboreIdentifier} is missing Sitecom trajectory path, and is therfore currently using a trajectory path provided by SMDA`,
+  shortDescription: `${uniqueWellboreIdentifier} is currently missing Sitecom trajectory path `,
+});
