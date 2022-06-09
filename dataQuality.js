@@ -249,7 +249,7 @@ export const MULTIPLE_SURFACES_WITH_SAME_NAME = surfaceName => ({
   shortDescription: `The name, ${surfaceName} is used for multiple surfaces`,
 });
 
-export const TRAJECTORY_PATH = ({uniqueWellboreIdentifier, wellboreUuid}) => ({
+export const TRAJECTORY_PATH = (uniqueWellboreIdentifier, wellboreUuid) => ({
   category: 'Operational wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
@@ -257,7 +257,7 @@ export const TRAJECTORY_PATH = ({uniqueWellboreIdentifier, wellboreUuid}) => ({
   shortDescription: `${uniqueWellboreIdentifier} trajectory not available from Sitecom`,
 });
 
-export const TRAJECTORY_NORTHING_OR_EASTING = ({uniqueWellboreIdentifier, wellboreUuid}) => ({
+export const TRAJECTORY_NORTHING_OR_EASTING = (uniqueWellboreIdentifier, wellboreUuid) => ({
   category: 'Operational wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
@@ -265,7 +265,7 @@ export const TRAJECTORY_NORTHING_OR_EASTING = ({uniqueWellboreIdentifier, wellbo
   shortDescription: `${uniqueWellboreIdentifier} is missing northing or easting in Sitecom`,
 });
 
-export const TRAJECTORY_SMDA = ({uniqueWellboreIdentifier, wellboreUuid}) => ({
+export const TRAJECTORY_SMDA = (uniqueWellboreIdentifier, wellboreUuid) => ({
   category: 'Operational wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
