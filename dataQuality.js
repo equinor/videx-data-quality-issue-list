@@ -253,8 +253,8 @@ export const TRAJECTORY_PATH = (uniqueWellboreIdentifier, wellboreUuid) => ({
   category: 'Operational wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
-  message: `Trajectory for ${uniqueWellboreIdentifier} is not available from Sitecom`,
-  shortDescription: `${uniqueWellboreIdentifier} trajectory not available from Sitecom`,
+  message: `The trajectory for ${uniqueWellboreIdentifier} is not available from Sitecom`,
+  shortDescription: `${uniqueWellboreIdentifier} trajectory is not available from Sitecom`,
 });
 
 export const TRAJECTORY_NORTHING_OR_EASTING = (uniqueWellboreIdentifier, wellboreUuid) => ({
@@ -269,6 +269,6 @@ export const TRAJECTORY_SMDA = (uniqueWellboreIdentifier, wellboreUuid) => ({
   category: 'Operational wellbores',
   severity: 'warning',
   resourceUuid: wellboreUuid,
-  message: `${uniqueWellboreIdentifier} is missing Sitecom trajectory path, and is therfore currently using a trajectory path provided by SMDA`,
+  message: `${uniqueWellboreIdentifier} is missing the Sitecom trajectory path, and is therefore currently using a trajectory path provided by SMDA`,
   shortDescription: `${uniqueWellboreIdentifier} is currently missing Sitecom trajectory path `,
 });
